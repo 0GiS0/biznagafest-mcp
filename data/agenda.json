@@ -1,0 +1,163 @@
+[
+  {
+    "titulo": "Check In",
+    "ponente": "Bienvenidos a BiznagaFest 2025",
+    "hora_inicio": "09:00",
+    "hora_fin": "09:30",
+    "descripcion": ""
+  },
+  {
+    "titulo": "Inauguración",
+    "ponente": "Prestanción y agradecimientos",
+    "hora_inicio": "09:30",
+    "hora_fin": "09:45",
+    "descripcion": ""
+  },
+  {
+    "titulo": "Smart Shortcuts: Google AI for a More Productive You",
+    "ponente": "Katya Vinnichenko, Google",
+    "hora_inicio": "09:45",
+    "hora_fin": "10:40",
+    "descripcion": "Feeling overwhelmed by your to-do list or looking for an edge in content creation? Join my talk to explore how Google's newest AI products are changing everyday tasks.\nThis session will dig into practical examples of how tools like Gemini in Workspace, NotebookLM, and Google's generative media AI (Imagen, Veo, and Flow) can significantly improve your efficiency and outcome. We'll cover how to leverage them for automation, quick content generation, instant summaries, and easier brainstorming. Leave with actionable ideas how to integrate Google AI into your personal and professional life."
+  },
+  {
+    "titulo": "Reconocimiento de imágenes con Google Cloud y Raspberry",
+    "ponente": "Javier López, Deloitte",
+    "hora_inicio": "09:45",
+    "hora_fin": "11:40",
+    "descripcion": "En este taller veremos cómo se crea desde cero un sistema de IA con IoT para analizar por imagen los desperfectos de piezas fisicas. Partiremos de crear un datasheet de imágenes, entrenaremos un modelo de IA en Google Cloud, lo exportaremos para ejecutarlo desde una Raspberry, configuraremos un script que se conecte a la webcam y analizaremos en tiempo real las piezas sin necesidad de internet."
+  },
+  {
+    "titulo": "MCP: Securing the unsecure",
+    "ponente": "Javier Álvarez, Santander & Alejandro Garabito, Telefónica",
+    "hora_inicio": "09:45",
+    "hora_fin": "11:40",
+    "descripcion": "¡MCP (Model Context Protocol) ha llegado para quedarse! Este protocolo permite dar \"manos\" a los agentes de IA para que puedan user herramientas y acceder a recursos externos. Pero cuidao' que estas manos también pueden robarte: exfiltrar tus claves, inyectar backdoors, entregar el control total de tu infraestructura a un atacante, ...   La revolución de los agentes ya está aquí, pero ¿quién tiene realmente el control?"
+  },
+  {
+    "titulo": "¿El principio del fin? Peligros y oportunidades",
+    "ponente": "Miguel Ángel Durán, midudev",
+    "hora_inicio": "10:45",
+    "hora_fin": "11:40",
+    "descripcion": "La IA está transformando la programación. ¿Pero lo está haciendo para bien? ¿Realmente los programadores van a perder su trabajo o se va a convertir en nuestra mejor herramienta? En esta charla exploraremos las oportunidades y riesgos que nos trae la IA como programadores."
+  },
+  {
+    "titulo": "Beyond the Code: Thriving as a Senior Engineer in the Age of Ownership",
+    "ponente": "Sheila Naujoks, The Workshop",
+    "hora_inicio": "10:45",
+    "hora_fin": "11:40",
+    "descripcion": "Being a great senior engineer is no longer just about clean code and clever architecture. In today’s fast-moving tech landscape, it is about being relentlessly curious, ruthlessly pragmatic, and deeply invested in the systems — and people — you help shape.\nThis talk explores what it truly means to level up as a senior software engineer or emerging technical leader. We will dig into the mindsets and habits that separate the good from the great: embracing automation, measuring what matters, mentoring with purpose, and taking radical ownership of both the technology and the culture around you.\nFrom navigating new tools and AI-assisted workflows to championing team productivity and long-term platform health, you will leave with practical, battle-tested strategies for becoming the kind of engineer every team wants and every platform needs.\nWhether you're already in a senior role or aspiring to grow into one, this session will give you the clarity and confidence to lead with impact — without losing your love of the craft."
+  },
+  {
+    "titulo": "☕ Coffee Break",
+    "ponente": "Recarguemos las pilas",
+    "hora_inicio": "11:45",
+    "hora_fin": "12:30",
+    "descripcion": ""
+  },
+  {
+    "titulo": "La observabilidad es mi pastor, nada me falta",
+    "ponente": "Israel Blancas, Coralogix",
+    "hora_inicio": "12:30",
+    "hora_fin": "13:25",
+    "descripcion": "¿Te sientes perdido cada vez que tu sistema se rompe como si fuera domingo sin logs? ¿Tus métricas se esconden más que los bugs en producción? Tranquilo, porque la observabilidad viene a salvarnos.\nEn esta charla hablaremos sobre qué es la observabilidad (spoiler: no es solo tener muchos dashboards), por qué es clave para entender lo que realmente pasa en nuestros sistemas y cómo puede evitar que terminemos rezando por respuestas a medianoche. Exploraremos conceptos básicos, problemas comunes y herramientas open source que pueden convertirse en tu nuevo credo técnico.\nVen y acompáñanos: no prometemos milagros, pero sí menos alertas a las 3AM."
+  },
+  {
+    "titulo": "From Android to Full-Stack: A Developer's Journey to the Great Unknown",
+    "ponente": "Danny Preussler, Soundcloud",
+    "hora_inicio": "12:30",
+    "hora_fin": "13:25",
+    "descripcion": "For over ten years, I lived and breathed Android. I knew the ecosystem inside out. Then, I decided to hit the reset button and become a full-stack developer. A scary moment, what was I thinking?\nThis session is the story of that transition, one that is still ongoing. I'll take you through the highs of discovering new technologies and the lows of feeling like a beginner all over again. I'll share the eye-opening aha! moments, the skills that transfer, and the ones that don't, the frustrating WTFs, and the practical lessons learned along the way."
+  },
+  {
+    "titulo": "Building your AI agent with Agent Development Kit (ADK)",
+    "ponente": "Abdel Sghiouar",
+    "hora_inicio": "12:30",
+    "hora_fin": "14:25",
+    "descripcion": "Learn to build a multi-agent system by creating a travel assistant."
+  },
+  {
+    "titulo": "Manual para romper tu sistema: Antipatrones de diseño",
+    "ponente": "Sebastian Luna, Globant",
+    "hora_inicio": "12:30",
+    "hora_fin": "14:25",
+    "descripcion": "Antipatrones comunes en el diseño de software, por qué aparecen y cómo evitarlos. Veremos ejemplos reales en backend y sistemas distribuidos, con alternativas prácticas para construir código más limpio, escalable y mantenible."
+  },
+  {
+    "titulo": "Entendiendo el Presente con los Fundamentos del Software",
+    "ponente": "Martí Cristobal, Bettatech",
+    "hora_inicio": "13:30",
+    "hora_fin": "14:25",
+    "descripcion": "El mundo del software es un mundo que cambia muy rápido. Nuevos frameworks, nuevas tecnologías, nuevas metodologías que cambian la forma en la que trabajamos.\nA pesar de esto, la mayoría de herramientas consisten en capas y capas de abstracción construidas sobre tecnologías, frameworks y protocolos diseñados en los años 70, 80 y 90: Http, SQL, la WWW.\nExiste actualmente mucha ansiedad sobre qué aprender, cuál será el siguiente gran boom, pero a la vez hay mucho miedo al ver que la IA cada vez es capaz de automatizar más la generación de código.\nHoy en día, conocer estos fundamentos sobre los que se construye la mayoria del software actual es una de las herramientas más poderosas para innovar, construir y mantenerse flexible durante toda la carrera laboral.\nEn la charla haremos un recorrido relacionando tecnologías más o menos modernas con su origen, por ejemplo viendo como tRPC y GraphQL se construyeron encima de HTTP, y viendo ejemplos de cómo grandes empresas siguen utilizando herramientas como SQL para soportar millones de usuarios."
+  },
+  {
+    "titulo": "Tenemos que hablar.... (de salud mental en el mundo tech)",
+    "ponente": "Henar Vega, Ingeniera y Psicóloga",
+    "hora_inicio": "13:30",
+    "hora_fin": "14:25",
+    "descripcion": "¿Cuántas veces has pronunciado la frase “estoy quemad@“ (o cosas menos elegantes… !%&$#@%!) en el último año? Es hora de hablar abiertamente de salud mental en tecnología, un sector donde el ritmo frenético y las presiones constantes nos llevan a un “404 emocional”.\nExploraremos nuestras diferencias con respecto a otros sectores y también, ¡cómo no! hablaremos sobre el impacto que la IA pueda tener. La salud mental y el bienestar deben ser una prioridad en nuestro backlog si queremos innovar y crear productos exitosos."
+  },
+  {
+    "titulo": "Almuerzo",
+    "ponente": "¡Prepárate para la paella!",
+    "hora_inicio": "14:30",
+    "hora_fin": "16:00",
+    "descripcion": ""
+  },
+  {
+    "titulo": "How to build a diagnostic agent with Vertex AI SDK and osquery",
+    "ponente": "Daniela Petruzalek, Google",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:55",
+    "descripcion": "In this session you are going to learn how to build an AI Agent from scratch using the Vertex AI SDK for Python and osquery.\nThis agent will enable you to run diagnostics in a machine using natural language, enabling you to ask questions like \"what are the top memory consuming processes?\" or \"can you find any signs of malware on my system?\"\nThis is made possible because LLMs are particularly good at writing SQL queries and osquery enables us to query operating system information through SQL. By combining both technologies in an agent interface we can have human-like interactions with our machine, potentially speeding up the diagnostic process. Is this the beginning of \"AgentOps\"*?\nTopics covered in the session:\nWhat is an agent?\nWhat is osquery?\nAgent-model interactions\nFine-tuning the agent\nSession control\nDeploying the agent to the cloud\n(*Not really - unfortunately other people already claimed this term! :))"
+  },
+  {
+    "titulo": "Kotlin MultiPlatform: La thermomix del desarrollo",
+    "ponente": "Aris Guimera, Aristidevs",
+    "hora_inicio": "16:00",
+    "hora_fin": "16:55",
+    "descripcion": "¿Y si te dijera que programando una única app la puedes tener hasta en 6 entornos distintos?\nKotlin Multiplatform nos permite crear aplicaciones para varias plataformas reutilizando todo el código que queramos.\nEn esta charla aprenderemos las distintas formas de trabajar con KMP, sus ventajas, limitaciones y saldremos con los conocimientos mínimos necesarios para poder configurar y compilar nuestra primera app en el entorno que quieras."
+  },
+  {
+    "titulo": "Creando un prototipo de producto partiendo de cero",
+    "ponente": "Amalia Gómez, Product and Consultant mentor",
+    "hora_inicio": "16:00",
+    "hora_fin": "17:55",
+    "descripcion": "Como en grupos podemos partir de una idea, entender los requerimientos y crear un prototipo básico que permita cubrir las necesidades de los stakeholders."
+  },
+  {
+    "titulo": "Coding for emotion. For diverse minds and emotional realities",
+    "ponente": "Stephanie Weber, Fielmann",
+    "hora_inicio": "16:00",
+    "hora_fin": "17:55",
+    "descripcion": "We optimize for performance, logic, and clean architecture — but forget one thing: users don’t experience our products rationally. They feel their way through them. Shame, trust, frustration, joy — these emotions are shaped not just by design, but by code.\nThis workshop is a hands-on exploration of the emotional layer of UX — and why developers play a central role in shaping it. After a short keynote on how emotions influence user behavior, participants will work in small groups, each focused on one specific emotion (like shame, fear, or pride) and a neuroinclusive persona.\nTogether, we’ll unpack how technical decisions affect emotional experience — and how to design flows, defaults, and interactions that reduce friction, build trust, and support real human needs.\nYou’ll leave with:\nA new lens on user behavior — through emotion and neurodiversity\nPractical tools for emotionally-aware implementation\nAnd a deeper understanding of your role in creating products that don’t just work — they feel right.\nBecause in the end, the best code doesn’t just run. It resonates."
+  },
+  {
+    "titulo": "IA con salero: descubre MCP Servers en Málaga",
+    "ponente": "Gisela Torres, Microsoft",
+    "hora_inicio": "17:00",
+    "hora_fin": "17:55",
+    "descripcion": "En esta charla te contaré, con salero y ejemplos prácticos, cómo funcionan, qué ventajas ofrecen para trabajar con modelos de IA y cómo pueden integrarse fácilmente en tu día a día como developer.\nUna sesión ligera, entretenida y con demos en vivo para que salgas diciendo: “¡Ahora sí que le pillé el punto a los MCP Servers!”"
+  },
+  {
+    "titulo": "☕ Coffee Break y Sorteos",
+    "ponente": "¡Visita la zona de sponsors!",
+    "hora_inicio": "17:55",
+    "hora_fin": "18:10",
+    "descripcion": ""
+  },
+  {
+    "titulo": "CQRS Práctico",
+    "ponente": "Carlos Buenosvinos",
+    "hora_inicio": "18:10",
+    "hora_fin": "19:00",
+    "descripcion": "Vamos a explorar con algunos ejemplos prácticos los beneficios de esta arquitectura de software, su evolución desde Arquitectura Hexagonal, porqué y cuándo usarla en tus aplicaciones y qué consideraciones hay que tener en cuenta para sacar el máximo partido de ella."
+  },
+  {
+    "titulo": "✨ Clausura",
+    "ponente": "¡Sorpresas!",
+    "hora_inicio": "19:00",
+    "hora_fin": "19:30",
+    "descripcion": ""
+  }
+]

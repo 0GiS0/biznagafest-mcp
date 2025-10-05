@@ -47,7 +47,7 @@ Como paso previo reutilizamos el MCP Server de **Playwright** (disponible en el 
 3. 🕸️ **Pide la agenda del evento**  
 	Lanza el siguiente prompt desde tu cliente MCP:
 	```
-	Visita https://www.biznagafest.com/#schedule y devuelve la agenda en JSON con estos campos: título, ponente, hora de inicio, hora de fin y descripción.
+	Navega a https://www.biznagafest.com/#schedule y devuelve la agenda en JSON con estos campos: título, ponente, hora de inicio, hora de fin y descripción. Almacena el resultado en un archivo llamado `data/agenda.json`.
 	```
 4. 🧠 **Vectoriza la agenda**  
 	Para este ejemplo usé [Pinecone](https://www.pinecone.io/) como base de datos vectorial.
