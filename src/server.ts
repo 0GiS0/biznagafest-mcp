@@ -103,24 +103,6 @@ server.resource(
     }
 );
 
-// Añadimos un recurso dinámico de saludo
-server.registerResource(
-    'greeting',
-    new ResourceTemplate('greeting://{name}', { list: undefined }),
-    {
-        title: 'Greeting Resource', // Display name for UI
-        description: 'Dynamic greeting generator'
-    },
-    async (uri, { name }) => ({
-        contents: [
-            {
-                uri: uri.href,
-                mimeType: 'text/plain',
-                text: `Hello, ${name}!`
-            }
-        ]
-    })
-);
 
 // Configuramos Express y el transporte HTTP
 const app = express();
