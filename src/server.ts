@@ -1,107 +1,30 @@
-import { readFile, stat } from 'node:fs/promises';
-import path from 'node:path';
-
-import { McpServer, ResourceTemplate } from '@modelcontextprotocol/sdk/server/mcp.js';
+// 📦 Importar las dependencias necesarias
+import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
-import { ErrorCode, McpError } from '@modelcontextprotocol/sdk/types.js';
 import express from 'express';
-import { z } from 'zod';
+import { tools } from './tools/index';
 
-// Creamos el servidor MCP
+
+// ⚙️ Configurar el puerto del servidor (usa variable de entorno o 3001 por defecto)
+const PORT = parseInt(process.env.PORT || '3001');
+
+
+// 🚀 Crear una nueva instancia del servidor MCP
 const server = new McpServer({
     name: 'biznagafest-mcp',
     version: '1.0.0'
 });
 
-// Añadimos una herramienta de suma
-server.registerTool(
-    'add',
-    {
-        title: 'Addition Tool',
-        description: 'Add two numbers',
-        inputSchema: { a: z.number(), b: z.number() },
-        outputSchema: { result: z.number() }
-    },
-    async ({ a, b }) => {
-        const output = { result: a + b };
-        return {
-            content: [{ type: 'text', text: JSON.stringify(output) }],
-            structuredContent: output
-        };
-    }
-);
-
-
-const agendaResourceUri = 'event-agenda://biznagafest-2025';
-const agendaMetadata = {
-    title: 'BiznagaFest 2025 Agenda',
-    description: 'Full schedule for BiznagaFest 2025 sessions.',
-    mimeType: 'application/json',
-    annotations: {
-        audience: ['assistant', 'user'],
-        priority: 0.8
-    }
-};
-const agendaFilePath = path.resolve(process.cwd(), 'data', 'agenda.json');
-const agendaContentName = 'agenda.json';
-
-// Añado la agenda del evento como recurso estático compatible con MCP 2025-06-18
-server.resource(
-    'biznagafest-agenda',
-    agendaResourceUri,
-    agendaMetadata,
-    async uri => {
-        try {
-            const [rawAgenda, fileStats] = await Promise.all([
-                readFile(agendaFilePath, 'utf-8'),
-                stat(agendaFilePath)
-            ]);
-
-            let formattedAgenda: string;
-            try {
-                formattedAgenda = JSON.stringify(JSON.parse(rawAgenda), null, 2);
-            }
-            catch (parseError) {
-                throw new McpError(ErrorCode.InternalError, 'Agenda file contains invalid JSON', {
-                    uri: uri.href,
-                    cause: parseError instanceof Error ? parseError.message : String(parseError)
-                });
-            }
-
-            return {
-                contents: [
-                    {
-                        uri: uri.href,
-                        name: agendaContentName,
-                        title: agendaMetadata.title,
-                        description: agendaMetadata.description,
-                        mimeType: agendaMetadata.mimeType,
-                        text: formattedAgenda,
-                        annotations: {
-                            ...agendaMetadata.annotations,
-                            lastModified: fileStats.mtime.toISOString()
-                        }
-                    }
-                ]
-            };
-        }
-        catch (error) {
-            if (error instanceof McpError) {
-                throw error;
-            }
-
-            const err = error as NodeJS.ErrnoException;
-            if (err?.code === 'ENOENT') {
-                throw new McpError(-32002, 'Resource not found', { uri: uri.href });
-            }
-
-            throw new McpError(ErrorCode.InternalError, 'Unable to load event agenda', {
-                uri: uri.href,
-                cause: err instanceof Error ? err.message : String(err)
-            });
-        }
-    }
-);
+// 🛠️ Registrar todas las herramientas (tools) en el servidor
+// Itera sobre cada herramienta y la registra con su nombre, descripción, esquema y handler
+tools.forEach(tool => {
+    server.tool(
+        tool.name,
+        tool.description,
+        tool.schema,
+        tool.handler
+    );
+});
 
 
 // Configuramos Express y el transporte HTTP
@@ -127,7 +50,7 @@ const port = parseInt(process.env.PORT || '3000');
 app.listen(port, () => {
 
     console.log(`🚀 MCP Server en http://localhost:${port}/mcp`);
-    
+
 }).on('error', error => {
     console.error('Server error:', error);
     process.exit(1);
