@@ -4,6 +4,7 @@ dotenv.config(); // 🔐 Cargar las variables de entorno desde el archivo .env
 import { google } from "googleapis"; // 🎥 Cliente oficial de APIs de Google
 import { z } from "zod"; // 📝 Librería para validación de esquemas
 import type { tool } from "./types"; // 🛠️ Tipo personalizado para definir herramientas
+import logger from "../logger";
 
 // 🎬 Configurar el cliente de YouTube API v3 con la clave de autenticación
 const youtube = google.youtube({
@@ -23,6 +24,9 @@ const search_video_tool: tool<typeof searchVideoSchema> = {
     schema: searchVideoSchema,
     handler: async (input) => {
         const { query, maxResults = 5 } = input;
+
+        logger.info(`🔍 Iniciando búsqueda de videos en YouTube para la consulta: "${query}" con un máximo de ${maxResults} resultados.`);
+
 
         try {
             // Realizar la búsqueda en YouTube
