@@ -1,8 +1,12 @@
 {
 	"servers": {
 		"biznagafest-mcp": {
-			"url": "http://localhost:3000/mcp",
-			"type": "http"
+			"type": "stdio",
+			"command": "node",
+			"args": [
+				"./dist/server.js"
+			],
+			"envFile": "${workspaceFolder}/.env"
 		}
 	},
 	"inputs": []

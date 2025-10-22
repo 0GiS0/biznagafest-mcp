@@ -1,4 +1,6 @@
 // 📝 Importar Zod para validación de esquemas
+import { RequestHandlerExtra } from "@modelcontextprotocol/sdk/shared/protocol.js";
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 
 // 🛠️ Definición del tipo genérico 'tool' para crear herramientas MCP
@@ -17,6 +19,7 @@ export type tool<Args extends z.ZodRawShape> = {
     // Recibe los argumentos validados y devuelve el resultado
     handler: (
         args: z.infer<z.ZodObject<Args>>,
+        extra: RequestHandlerExtra<any, any>
     ) =>
         // 🔄 Puede devolver una Promesa (async) o un resultado directo (sync)
         | Promise<{
@@ -34,3 +37,8 @@ export type tool<Args extends z.ZodRawShape> = {
             }>;
         };
 };
+
+// 🏭 Tipo factory para crear tools que necesitan acceso al servidor
+export type toolFactory<Args extends z.ZodRawShape> = (
+    server: McpServer
+) => tool<Args>;
