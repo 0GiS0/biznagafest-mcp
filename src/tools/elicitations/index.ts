@@ -26,25 +26,22 @@ export const searchChannelTool = {
                 method: "elicitation/create",
                 params: {
                     message:
-                        "Por favor, configura tus preferencias para la búsqueda del canal:",
+                        "¿Deseas recuperar también los últimos vídeos del canal?",
                     requestedSchema: {
                         type: "object",
                         properties: {
-                            language: {
+                            includeVideos: {
                                 type: "string",
-                                title: "Idioma del canal",
-                                description: "¿En qué idioma prefieres que sea el canal?",
-                                enum: ["es", "en", "zh", "fr", "de"],
+                                title: "Incluir vídeos",
+                                description: "¿Deseas recuperar también los últimos vídeos del canal?",
+                                enum: ["si", "no"],
                                 enumNames: [
-                                    "💃🏼 Español",
-                                    "☕️ Inglés",
-                                    "🇨🇳 Chino",
-                                    "🥐 Francés",
-                                    "🍺 Alemán",
+                                    "✅ Sí, incluir vídeos",
+                                    "❌ No, solo información del canal",
                                 ],
                             },
                         },
-                        required: ["language"],
+                        required: ["includeVideos"],
                     },
                 },
             },
@@ -53,15 +50,22 @@ export const searchChannelTool = {
 
         console.debug("Elicitation response", response);
 
-        const language = response.content.language;
+        const includeVideos = response.content.includeVideos === "si";
 
         try {
-            const results = await searchChannel({ query, language });
+            const results = await searchChannel({ query, includeVideos });
+            
+            let responseText = JSON.stringify(results, null, 2);
+            
+            if (includeVideos) {
+                responseText += "\n\n📹 Nota: Se incluirán los últimos vídeos del canal en la búsqueda completa.";
+            }
+            
             return {
                 content: [
                     {
                         type: "text",
-                        text: JSON.stringify(results, null, 2),
+                        text: responseText,
                     },
                 ],
             };

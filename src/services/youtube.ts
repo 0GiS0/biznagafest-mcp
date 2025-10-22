@@ -38,7 +38,7 @@ export async function searchVideos(query: string, maxResults: number = 5) {
         }
 
         logger.trace('📡 Llamando a youtube.search.list()...');
-        
+
         // Realizar la búsqueda en YouTube
         const response = await youtube.search.list({
             part: ["snippet"],
@@ -60,7 +60,7 @@ export async function searchVideos(query: string, maxResults: number = 5) {
 
         logger.info(`✅ Búsqueda completada: ${results.length} videos encontrados`);
         logger.debug('📊 Títulos de videos:', results.map(r => r.title));
-        
+
         return results;
     } catch (error) {
         const errorMessage = error instanceof Error ? error.message : String(error);
@@ -76,23 +76,21 @@ export async function searchVideos(query: string, maxResults: number = 5) {
     }
 }
 
-export async function searchChannel(params: { query: string; language: string; maxResults?: number }) {
-    const { query, language, maxResults = 5 } = params;
-    
+export async function searchChannel(params: { query: string; includeVideos: boolean; maxResults?: number }) {
+    const { query, includeVideos, maxResults = 3 } = params;
+
     logger.trace('🎬 INICIO: searchChannel invocada');
     logger.info(`🔍 Búsqueda de canales en YouTube`);
     logger.debug(`   Query: "${query}"`);
-    logger.debug(`   Language: "${language}"`);
+    logger.debug(`   includeVideos: "${includeVideos}"`);
     logger.debug(`   Max Results: ${maxResults}`);
-    
+
     try {
         logger.trace('📡 Llamando a youtube.search.list()...');
-        
         const response = await youtube.search.list({
             part: ["snippet"],
             q: query,
             type: ["channel"],
-            relevanceLanguage: language,
             maxResults: maxResults
         } as any);
 
@@ -108,14 +106,56 @@ export async function searchChannel(params: { query: string; language: string; m
 
         logger.info(`✅ Búsqueda completada: ${results.length} canales encontrados`);
         logger.debug('📊 Títulos de canales:', results.map(r => r.title));
-        
+
+        // Si se solicitan los vídeos, obtener los últimos vídeos de cada canal
+        if (includeVideos) {
+            logger.debug('📹 Obteniendo últimos vídeos de los canales...');
+
+            for (let i = 0; i < results.length; i++) {
+                try {
+                    const result = results[i];
+                    if (!result || !result.channelId) {
+                        logger.warn(`⚠️ Canal sin ID en posición ${i}`);
+                        continue;
+                    }
+
+                    logger.trace(`📡 Buscando vídeos del canal: ${result.channelId}`);
+
+                    const videosResponse = await youtube.search.list({
+                        part: ["snippet"],
+                        channelId: result.channelId,
+                        maxResults: maxResults,
+                        order: "date",
+                        type: ["video"]
+                    } as any);
+
+                    const videos = videosResponse.data.items?.map((item: any) => ({
+                        videoId: item.id?.videoId,
+                        title: item.snippet?.title,
+                        description: item.snippet?.description,
+                        publishedAt: item.snippet?.publishedAt,
+                        url: `https://www.youtube.com/watch?v=${item.id?.videoId}`
+                    })) || [];
+
+                    logger.debug(`   ✅ ${videos.length} vídeos obtenidos del canal ${result.title}`);
+                    (result as any).videos = videos;
+                } catch (error) {
+                    const result = results[i];
+                    logger.warn(`⚠️ Error obteniendo vídeos del canal ${result?.title}`, error);
+                    if (result) {
+                        (result as any).videos = [];
+                    }
+                }
+            }
+        }
+
         return results;
     } catch (error) {
         const errorMessage = error instanceof Error ? error.message : String(error);
         const errorStack = error instanceof Error ? error.stack : 'sin stack trace';
         logger.error(`❌ ERROR en searchChannel`, {
             query,
-            language,
+            includeVideos,
             maxResults,
             error: errorMessage,
             stack: errorStack,
