@@ -13,7 +13,11 @@
 
 ---
 
+<div align="center">
+
 ![MCP Servers en Málaga](./images/MCP%20servers%20en%20Malaga.png)
+
+</div>
 
 ---
 
@@ -43,7 +47,7 @@ Busca videos en YouTube basándote en una consulta simple. Esta es la demo perfe
 
 ---
 
-### 🟡 2️⃣ **Search Channel** — _Herramienta Interactiva_
+### 🟡 2️⃣ **Search Channel** — _Herramienta Interactiva (Elicitations)_
 
 > 💬 Un paso adelante: interacción en tiempo real con el usuario
 
