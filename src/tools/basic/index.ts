@@ -1,8 +1,6 @@
 // 📦 Importar las dependencias necesarias
 import { z } from "zod"; // 📝 Librería para validación de esquemas
-import type { toolFactory } from "../types"; // 🛠️ Tipo personalizado para definir herramientas
 import { searchVideos } from "../../services/youtube"; // 🎬 Servicio de YouTube
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import logger from "../../logger";
 
 // 📋 Esquema de validación para la búsqueda de videos
@@ -11,18 +9,16 @@ const searchVideoSchema = {
     maxResults: z.number().min(1).max(50).optional()
 } as const;
 
-// 🏭 Factory para crear la herramienta con acceso al servidor
-export const createSearchVideoTool: toolFactory<typeof searchVideoSchema> = (
-    server: McpServer
-) => ({
+// � Herramienta de búsqueda de videos - SIN FACTORY
+export const searchVideoTool = {
     name: "search_video",
     description: "Busca videos en YouTube basados en una consulta dada.",
     schema: searchVideoSchema,
-    handler: async (input) => {
+    handler: async (args: { query: any; maxResults?: number }) => {
         logger.trace('🎬 INICIO: Handler de search_video invocado');
-        logger.debug('📋 Parámetros recibidos:', { input });
+        logger.debug('📋 Parámetros recibidos:', { args });
         
-        const { query, maxResults = 5 } = input;
+        const { query, maxResults = 5 } = args;
         logger.info(`🔍 Buscando videos con query="${query}" y maxResults=${maxResults}`);
 
         try {
@@ -43,28 +39,28 @@ export const createSearchVideoTool: toolFactory<typeof searchVideoSchema> = (
             return {
                 content: [
                     {
-                        type: "text" as const,
+                        type: "text",
                         text: resultText
                     }
                 ]
             };
         } catch (error) {
-            const errorMessage = error instanceof Error ? error.message : String(error);
+            const e = error as Error;
             logger.error('❌ Error en search_video handler', {
-                error: errorMessage,
-                stack: error instanceof Error ? error.stack : undefined,
+                error: e.message,
+                stack: e.stack,
                 query,
                 maxResults
             });
             return {
                 content: [
                     {
-                        type: "text" as const,
-                        text: `Error al buscar videos en YouTube: ${errorMessage}`
+                        type: "text",
+                        text: `Error consultando YouTube: ${e.message}`
                     }
                 ],
                 isError: true
             };
         }
     }
-});
+};

@@ -20,8 +20,9 @@ async function main() {
     logger.debug('Servidor MCP creado correctamente');
 
     // 🛠️ Obtener y registrar todas las herramientas (tools) en el servidor
-    logger.info('📋 Registrando herramientas...');
-    const tools = getTools(server);
+    logger.info('📋 Registrando demos ✨...');
+    const tools = getTools();
+
     tools.forEach((tool: any) => {
         server.tool(
             tool.name,
