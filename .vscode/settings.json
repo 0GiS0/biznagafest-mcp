@@ -1,0 +1,13 @@
+{
+    "chat.mcp.serverSampling": {
+        "biznagafest-mcp/.vscode/mcp.json: biznagafest-mcp": {
+            "allowedModels": [
+                "copilot/gpt-4.1",
+                "copilot/claude-haiku-4.5",
+                "copilot/claude-sonnet-4",
+                "copilot/claude-sonnet-4.5",
+                "copilot/gpt-5-mini"
+            ]
+        }
+    }
+}

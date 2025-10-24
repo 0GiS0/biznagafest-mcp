@@ -28,11 +28,15 @@ export const searchVideoTool = {
             logger.info(`✅ ${results.length} resultados encontrados`);
 
             if (results.length > 0) {
-                logger.debug('📊 Resultados:', results.map(r => ({ title: r.title, url: r.url })));
+                logger.debug('📊 Resultados:', results.map(r => ({ title: r.title, channel: r.channel, url: r.url })));
             }
 
             const resultText = results.length > 0
-                ? results.map((r: any) => `- ${r.title} (${r.url})`).join('\n')
+                ? results.map((r: any) => {
+                    const channelInfo = r.channel ? `\nCanal: ${r.channel}` : '';
+                    const descriptionInfo = r.description ? `\nDescripción: ${r.description}` : '';
+                    return `Título: ${r.title}${channelInfo}\nURL: ${r.url}${descriptionInfo}`;
+                }).join('\n---\n')
                 : "No se encontraron videos";
 
             logger.trace('✅ Respuesta construida exitosamente');

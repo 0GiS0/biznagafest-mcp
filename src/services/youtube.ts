@@ -3,6 +3,7 @@ import * as dotenv from "dotenv";
 dotenv.config(); // 🔐 Cargar las variables de entorno desde el archivo .env
 import { google } from "googleapis"; // 🎥 Cliente oficial de APIs de Google
 import logger from "../logger";
+import { channel } from "diagnostics_channel";
 
 // 🎬 Configurar el cliente de YouTube API v3 con la clave de autenticación
 const apiKey = process.env.YOUTUBE_API_KEY;
@@ -54,12 +55,15 @@ export async function searchVideos(query: string, maxResults: number = 5) {
         const results = response.data.items?.map((item: any) => ({
             videoId: item.id?.videoId,
             title: item.snippet?.title,
+            channel: item.snippet?.channelTitle,
             description: item.snippet?.description,
             url: `https://www.youtube.com/watch?v=${item.id?.videoId}`
         })) || [];
 
         logger.info(`✅ Búsqueda completada: ${results.length} videos encontrados`);
         logger.debug('📊 Títulos de videos:', results.map(r => r.title));
+
+        logger.warn('📋 Resultados completos:', results);
 
         return results;
     } catch (error) {
