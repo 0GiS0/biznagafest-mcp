@@ -89,6 +89,34 @@ Genera títulos **creativos y únicos** para videos usando **sampling**. El serv
 
 ---
 
+## 📺 Vídeos Recomendados
+
+¿Quieres profundizar en las tecnologías que usamos en este repo? Aquí tienes una selección de vídeos de YouTube que te ayudarán a dominar el stack tecnológico:
+
+### 🎯 Model Context Protocol (MCP)
+
+| Vídeo | Canal | Descripción |
+|-------|-------|-------------|
+| [Getting Started with Cloudflare MCP Server](https://www.youtube.com/watch?v=vGajZpl_9yA) | Cloudflare Developers | Introducción práctica para lanzar un servidor MCP y conectarlo con Claude de Anthropic |
+| [Introduction to Model Context Protocol](https://anthropic.skilljar.com/introduction-to-model-context-protocol) | Anthropic Academy | Curso completo (+1h) sobre arquitectura MCP, construcción de servidores con Python SDK, y debugging |
+
+### 💻 TypeScript & Node.js
+
+| Vídeo | Canal | Descripción |
+|-------|-------|-------------|
+| [TypeScript - Curso COMPLETO desde 0](https://www.youtube.com/watch?v=sBgcHD1JsL4) | YouTube | Curso extenso en español: instalación, POO, genéricos, testing con Jest |
+| [Tutorial TypeScript con Node.js y Express](https://www.youtube.com/watch?v=ZpY5KdGQvwI) | YouTube | Crea tu API REST con tipos estáticos - enfoque práctico y profesional |
+| [Curso Avanzado de NodeJS y TypeScript](https://www.youtube.com/playlist?list=PLHYqV_0PS9KMqSHZTVT0NTFJDACC0AWCb) | YouTube | Playlist completa para desarrollar APIs avanzadas con arquitectura robusta |
+
+### 🎬 YouTube Data API v3
+
+| Vídeo | Canal | Descripción |
+|-------|-------|-------------|
+| [Node.js Quickstart - YouTube Data API](https://developers.google.com/youtube/v3/quickstart/nodejs) | Google Developers | Guía oficial de Google para empezar con la API de YouTube en Node.js |
+| [Retrieve Videos from YouTube Data API](https://blog.tericcabrel.com/retrieve-videos-youtube-data-api-v3-nodejs/) | Tech Blog | Tutorial paso a paso para obtener vídeos con Node.js y TypeScript |
+
+---
+
 ## 💝 ¿Te gustó la charla?
 
 Si disfrutaste con las demos y quieres más contenido sobre MCP Servers, desarrollo y tecnología con salero:
