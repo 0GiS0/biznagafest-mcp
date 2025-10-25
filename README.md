@@ -122,7 +122,7 @@ Genera títulos **creativos y únicos** para videos usando **sampling**. El serv
 **Trabajando con YouTube Data API**
 - 🎬 [YouTube Data API v3 Tutorial](https://www.youtube.com/watch?v=RjUlmco7v2M)
 - 📝 Cómo usar la API de YouTube en tus proyectos
-- ⏱️ Como la que usamos en este repo
+- ⏱️ Igual que la que usamos en este repo
 
 **Node.js + YouTube API**
 - 🎬 [Building with Google APIs in Node.js](https://www.youtube.com/watch?v=e-WgJ9fRIOA)
