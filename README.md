@@ -89,6 +89,42 @@ Genera títulos **creativos y únicos** para videos usando **sampling**. El serv
 
 ---
 
+## 📺 Vídeos Recomendados
+
+¿Quieres profundizar en las tecnologías que usamos en este proyecto? Aquí tienes una selección de vídeos de YouTube que te ayudarán a dominar el stack tecnológico:
+
+### 🔵 Model Context Protocol (MCP)
+
+**Building with MCP and the Claude API | Anthropic**
+- 🎯 Aprende a construir con MCP directamente de los ingenieros de Anthropic
+- 🔗 [Ver en YouTube](https://www.youtube.com/watch?v=gc4lN3fgBEk)
+
+**Model Context Protocol - Introduction to MCP**
+- 🎯 Introducción completa al protocolo MCP y su arquitectura
+- 🔗 [Ver en YouTube](https://www.youtube.com/watch?v=KJcCMOYdOH0)
+
+**Building software with Anthropic Claude MCP**
+- 🎯 Tutorial en vivo sobre cómo construir software con MCP y Claude
+- 🔗 [Ver en YouTube](https://www.youtube.com/live/Z8i6GCglECc)
+
+### 💙 TypeScript & Node.js
+
+**TypeScript in 100 Seconds | Fireship**
+- 🎯 Introducción rápida y efectiva a TypeScript
+- 🔗 [Ver en YouTube](https://www.youtube.com/watch?v=zQnBQ4tB3ZA)
+
+**Tips for TypeScript Best Practices**
+- 🎯 Mejores prácticas para escribir código TypeScript de calidad
+- 🔗 [Ver en YouTube](https://www.youtube.com/watch?v=F6EizGxWie4)
+
+### 🎬 YouTube Data API v3
+
+**How to Use YouTube Data API V3 2025 - Easy Guide**
+- 🎯 Guía completa y actualizada sobre la API de YouTube
+- 🔗 [Ver en YouTube](https://www.youtube.com/watch?v=3pNViDRKFns)
+
+---
+
 ## 💝 ¿Te gustó la charla?
 
 Si disfrutaste con las demos y quieres más contenido sobre MCP Servers, desarrollo y tecnología con salero:
