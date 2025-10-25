@@ -87,8 +87,6 @@ Genera títulos **creativos y únicos** para videos usando **sampling**. El serv
 
 ---
 
----
-
 ## 📺 Vídeos Relacionados
 
 Si quieres profundizar en las tecnologías utilizadas en este proyecto, aquí tienes algunos vídeos recomendados:
