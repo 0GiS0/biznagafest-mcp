@@ -140,5 +140,7 @@ vite.config.ts.timestamp-*
 .vite/
 .DS_Store
 
+# Build output
+dist/
 
 data/
