@@ -87,6 +87,32 @@ Genera títulos **creativos y únicos** para videos usando **sampling**. El serv
 
 ---
 
+## 📺 Vídeos Relacionados
+
+Si quieres profundizar en las tecnologías utilizadas en este proyecto, aquí tienes algunos vídeos recomendados:
+
+### 🎯 Model Context Protocol (MCP)
+
+- 🔴 **[Anthropic's MCP: Explained](https://www.youtube.com/results?search_query=Anthropic+Model+Context+Protocol+tutorial)** — Introducción al protocolo MCP y cómo funciona
+- 🔴 **[Building MCP Servers](https://www.youtube.com/results?search_query=building+MCP+servers+tutorial)** — Aprende a crear tus propios servidores MCP desde cero
+
+### 💻 TypeScript & Node.js
+
+- 🟦 **[TypeScript para principiantes](https://www.youtube.com/results?search_query=TypeScript+tutorial+español)** — Guía completa de TypeScript en español
+- 🟩 **[Node.js avanzado](https://www.youtube.com/results?search_query=Node.js+tutorial+español+avanzado)** — Domina Node.js con estos tutoriales
+
+### 🎥 YouTube API
+
+- 🔴 **[YouTube Data API v3 Tutorial](https://www.youtube.com/results?search_query=YouTube+Data+API+v3+tutorial)** — Aprende a integrar la API de YouTube en tus proyectos
+- 🔴 **[YouTube API con Node.js](https://www.youtube.com/results?search_query=YouTube+API+Node.js+tutorial)** — Integración práctica con Node.js
+
+### 🤖 Inteligencia Artificial
+
+- 🧠 **[IA y desarrollo moderno](https://www.youtube.com/results?search_query=inteligencia+artificial+desarrollo+software)** — Cómo la IA está transformando el desarrollo de software
+- 🚀 **[Herramientas de IA para developers](https://www.youtube.com/results?search_query=herramientas+IA+desarrolladores+2024)** — Las mejores herramientas de IA para potenciar tu productividad
+
+> 💡 **Tip**: ¿Quieres ver más contenido así? No olvides visitar [mi canal de YouTube](https://www.youtube.com/c/GiselaTorres?sub_confirmation=1) donde comparto demos, tutoriales y charlas técnicas con mucho salero 😉
+
 ---
 
 ## 💝 ¿Te gustó la charla?
