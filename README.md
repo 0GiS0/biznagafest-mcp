@@ -102,6 +102,6 @@ Si disfrutaste con las demos y quieres más contenido sobre MCP Servers, desarro
 
 ---
 
-**Gisela Torres Buitrago** · BiznagaFest 2025 · ¡Nos vemos en la próxima! 🚀
+**Gisela Torres** · BiznagaFest 2025 · ¡Nos vemos en la próxima! 🚀
 
 </div>
