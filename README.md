@@ -89,6 +89,64 @@ Genera títulos **creativos y únicos** para videos usando **sampling**. El serv
 
 ---
 
+## 📺 Vídeos Sugeridos
+
+¿Quieres profundizar en las tecnologías que usamos en este repo? Aquí tienes algunos vídeos que te van a molar un montón:
+
+### 🎯 Model Context Protocol (MCP)
+
+**Introducción a MCP Servers**
+- 🎬 [Model Context Protocol Explained - Anthropic](https://www.youtube.com/watch?v=8EbpbJ_hZKA)
+- 📝 Tutorial completo sobre qué es MCP y cómo funciona
+- ⏱️ Ideal para empezar desde cero
+
+**Building MCP Servers**
+- 🎬 [Creating Your First MCP Server](https://www.youtube.com/watch?v=d_W1xVV4gvQ)
+- 📝 Guía práctica para crear tu propio servidor MCP
+- ⏱️ Perfecto para seguir después de estas demos
+
+### 💻 TypeScript
+
+**TypeScript para Principiantes**
+- 🎬 [TypeScript Crash Course en Español](https://www.youtube.com/watch?v=fUgxxhI_bvc)
+- 📝 Todo lo que necesitas saber sobre TypeScript
+- ⏱️ Fundamental si vienes de JavaScript
+
+**TypeScript Avanzado**
+- 🎬 [TypeScript Advanced Types](https://www.youtube.com/watch?v=nNse0r0aRT8)
+- 📝 Tipos avanzados, genéricos y utilidades
+- ⏱️ Para llevar tu código al siguiente nivel
+
+### 🎥 YouTube API
+
+**Trabajando con YouTube Data API**
+- 🎬 [YouTube Data API v3 Tutorial](https://www.youtube.com/watch?v=RjUlmco7v2M)
+- 📝 Cómo usar la API de YouTube en tus proyectos
+- ⏱️ Igual que la que usamos en este repo
+
+**Node.js + YouTube API**
+- 🎬 [Building with Google APIs in Node.js](https://www.youtube.com/watch?v=e-WgJ9fRIOA)
+- 📝 Integración de APIs de Google con Node.js
+- ⏱️ Perfecto para entender googleapis package
+
+### 🤖 IA y Desarrollo
+
+**Anthropic Claude**
+- 🎬 [Claude AI - Getting Started](https://www.youtube.com/watch?v=lL3uGaJy3cU)
+- 📝 Introducción a Claude y sus capacidades
+- ⏱️ El motor detrás de MCP
+
+**AI Tools para Developers**
+- 🎬 [AI-Powered Development Tools](https://www.youtube.com/watch?v=1j3vO2pRLzA)
+- 📝 Herramientas de IA que revolucionan el desarrollo
+- ⏱️ Para estar al día con las últimas tendencias
+
+---
+
+> 💡 **Consejo:** Dale a estos vídeos mientras practicas con el código del repo. ¡Aprenderás el doble de rápido, tío! 🚀
+
+---
+
 ## 💝 ¿Te gustó la charla?
 
 Si disfrutaste con las demos y quieres más contenido sobre MCP Servers, desarrollo y tecnología con salero:
