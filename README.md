@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/0gis0-biznagafest-mcp-badge.png)](https://mseep.ai/app/0gis0-biznagafest-mcp)
+
 # 🎉 BiznagaFest 2025 · Demos "IA con salero"
 
 <div align="center">
